@@ -56,7 +56,7 @@ public class TrackerUI {
             input = removeWhiteSpace(input);
             System.out.println("Remove white space: " + input);
             //If the input starts with "B" and is succeeded (index 1) by "-"
-          if(input.startsWith("B") && input.charAt(1) == '-'){
+          if(input.startsWith("B") && input.length() > 1 && input.charAt(1) == '-'){
               //Get the name of the food starting at the index +1 of "-" to the end of the input's length
               String name = input.substring(input.indexOf("-")+1);
               System.out.println("Food to add: " + name);
@@ -74,7 +74,7 @@ public class TrackerUI {
               }
 
               //If the input starts with "L" and is succeeded (index 1) by "-"
-          } else if(input.startsWith("L") && input.charAt(1) == '-'){
+          } else if(input.startsWith("L") && input.length() > 1 &&  input.charAt(1) == '-'){
               //Get the name of the food starting at the index +1 of "-" to the end of the input's length
               String name = input.substring(input.indexOf("-")+1);
               System.out.println("Food to add: " + name);
@@ -111,7 +111,7 @@ public class TrackerUI {
               }
 
               //If the input starts with "S" and is succeeded (index 1) by "-"
-          } else if(input.startsWith("S") && input.charAt(1) == '-'){
+          } else if(input.startsWith("S") && input.length() > 1 && input.charAt(1) == '-'){
               //Get the name of the food starting at the index +1 of "-" to the end of the input's length
               String name = input.substring(input.indexOf("-")+1);
               System.out.println("Food to add: " + name);
@@ -132,7 +132,7 @@ public class TrackerUI {
 
 
 
-          } else if(input.startsWith("R") && input.charAt(1) == '-'){
+          } else if(input.startsWith("R") && input.length() > 1 && input.charAt(1) == '-'){
               if(this.calorieTracker.getFoodLog().isEmpty()){
                   System.out.println("Food log is empty!");
               } else{
